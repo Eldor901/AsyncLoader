@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : https://github.com/Eldor901
+  @group             : 
+  @last modified on  : 06-23-2022
+  @last modified by  : https://github.com/Eldor901
+-->
+<template>
+    <template if:true={value}>
+        <slot name="onFulfilled"></slot>
+    </template>
+    <template if:true={error}>
+        <lightning-card>
+            Fetching Error
+        </lightning-card>
+    </template>
+    <template if:true={isLoading}>
+        <lightning-card >
+            <div class="demo-only demo-only_viewport" style="height:6rem;position:relative">
+                <div role="status" class="slds-spinner slds-spinner_medium">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>  
+        </lightning-card>        
+    </template>
+</template>

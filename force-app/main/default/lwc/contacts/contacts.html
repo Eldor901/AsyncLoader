@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : https://github.com/Eldor901
+  @group             : 
+  @last modified on  : 06-23-2022
+  @last modified by  : https://github.com/Eldor901
+-->
+<template>
+    <c-loadable promise={contactPromise} show-loader="true" onload={onLoad} >
+        <div slot="onFulfilled">
+            <template if:true={contacts}>
+                <template for:each={contacts} for:item="contact">
+                    <p key={contact.Id}>{contact.Name}</p>
+                </template>
+            </template>
+        </div>
+    </c-loadable>
+</template>
