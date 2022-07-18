@@ -1,6 +1,6 @@
 # Loadable component.
 
-Main task of loadable component is encapsulation of loading and error states and show loaded data in styled version
+Main task of loadable component is encapsulation of loading, data and error states and show loaded data in styled version
 
 example 
 
