@@ -23,7 +23,7 @@ export default class Contacts extends LightningElement {
 ```
 | props  | values |  description |
 | ------------- |:-------------:| :-------------:|
-| show-loader   |true \| false   | If to show-loader or not
+| show-loader   |true \| false   | whether to show-loader or not
 | promise | Promise     | Pass api request promise  |
 | onload      |  Callback     | Returns data when promise fullfiled |
 
