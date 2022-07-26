@@ -5,28 +5,30 @@ Main task of loadable component is encapsulation of loading, data and error stat
 example 
 
 
-#####  Js file to handle api logic
+#####  logic in js file
 
 ```
 import { LightningElement, track } from 'lwc';
 import getContactList from '@salesforce/apex/ContactController.getContactList';
-
-
 export default class Contacts extends LightningElement {
     contactPromise = getContactList();
     
     @track
     contacts = [];
-
     onLoad(event) {
         this.contacts = event.detail;
         console.log(this.contacts)
     }
-
 }
 ```
+| props  | values |  description |
+| ------------- |:-------------:| :-------------:|
+| show-loader   |true \| false   | If to show-loader or not
+| promise | Promise     | Pass api request promise  |
+| onload      |  Callback     | Returns data when promise fullfiled |
 
-#####  show loaded data
+
+#####  c-loadable component usage in html file
 ```
   <c-loadable promise={contactPromise} show-loader="true" onload={onLoad} >
         <div slot="onFulfilled">
